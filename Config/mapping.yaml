@@ -1,0 +1,17 @@
+#AI
+# source_file is a filename or glob pattern (e.g. "sales_*.xlsx").
+# Only columns listed here are kept; they are renamed to "target" and cast to "type".
+# Supported types: int, float, str, bool, date, datetime
+# Optional per-column settings (#AI):
+#   case: lower | upper | title    (str columns)
+#   decimal: "," | "."             (int/float columns, default "," = Danish)
+# Values are normalised first: trimmed, units stripped ("12 pcs" -> 12), dates/Excel serials parsed.
+mappings:
+  - source_file: MOCK_DATA.*
+    columns:
+      - {source: id,         target: customer_id, type: int}
+      - {source: first_name, target: first_name,  type: str}
+      - {source: last_name,  target: last_name,   type: str}
+      - {source: email,      target: email,       type: str}
+      - {source: gender,     target: gender,      type: str}
+      - {source: ip_address, target: ip_address,  type: str}

@@ -99,3 +99,10 @@ Opens a folder dialog, then prints the files found and the mapped results.
 - Work in progress: only the sample `MOCK_DATA.*` mapping is configured so far.
 - Skipping blank and total rows is not implemented yet (see the TODOs in `Input/readFolderFiles.py`).
 - Output is CSV only; loading directly into SQL is not implemented yet.
+
+## Roadmap
+
+| Planned feature | Goal |
+| --- | --- |
+| SQL load with upsert | Load clean rows into SQL with upsert, so re-running never duplicates data |
+| Run logging | Log each run: rows in, clean, rejected, duplicates, duration |
